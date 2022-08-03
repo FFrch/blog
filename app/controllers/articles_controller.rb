@@ -18,6 +18,19 @@ class ArticlesController < ApplicationController
     redirect_to article_path(@article)
   end
 
+  def history
+    # Identifier tous les articles
+    # Identifier toutes les années de publication au sein de ces articles
+    # piur chaque année de publication, afficher les articles publiés
+    @articles = Article.all
+
+    @years = []
+    Article.pluck(:created_at).each do |year|
+      @years << year.strftime('%Y')
+    end
+    @years = @years.uniq.reverse
+  end
+
   private
 
   def article_params

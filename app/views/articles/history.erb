@@ -1,5 +1,3 @@
-<h1>Banner</h1>
-
 <h2>Navigation bar:</h2>
 <ul>
   <li><%= link_to "Home", articles_path %></li>
@@ -8,14 +6,22 @@
   <li>Search</li>
 </ul>
 
-<h3>Articles</h3>
+<h3>Historique des articles</h3>
+
+Pseudo code:
+ 1. Isoler chaque année durant lesquelles un article a été publié - ok
+ 2. Pour chacune de ces années, lister les titres des articles publiés & coder un lien redirigeant sur la vue de l'article
+
 <ul>
-  <% @articles.each do |article| %>
+  <%= @years.each do |year| %>
+    <li><%= year %></li>
+  <% end %>
+</ul>
+
     <ul>
       <li>
         <p><%= article.date %></p>
         <p><%= link_to article.title, article_path(article) %></p>
-        <p><%= link_to article.content, article_path(article) %></p>
       </li>
     </ul>
   <% end %>
