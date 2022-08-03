@@ -1,4 +1,10 @@
 <h1>Blog homepage</h1>
 <p>Now is <%= Time.now %></p>
 
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
+
 <%# <%= link_to "Lire la suite", show_path %>
