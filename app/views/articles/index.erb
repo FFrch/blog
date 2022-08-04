@@ -1,22 +1,25 @@
-<h1>Banner</h1>
+<div class="banner">
+  <%= image_tag('banner.jpg') %>
+</div>
+<div class="container">
+  <h2>Navigation bar:</h2>
+  <ul>
+    <li><%= link_to "Home", articles_path %></li>
+    <li><%= link_to "Historique", history_path %></li>
+    <li>Contact</li>
+    <li>Search</li>
+  </ul>
 
-<h2>Navigation bar:</h2>
-<ul>
-  <li><%= link_to "Home", articles_path %></li>
-  <li><%= link_to "Historique", history_path %></li>
-  <li>Contact</li>
-  <li>Search</li>
-</ul>
-
-<h3>Articles</h3>
-<ul>
-  <% @articles.each do |article| %>
-    <ul>
-      <li>
-        <p><%= article.date %></p>
-        <p><%= link_to article.title, article_path(article) %></p>
-        <p><%= link_to article.content, article_path(article) %></p>
-      </li>
-    </ul>
-  <% end %>
-</ul>
+  <h3>Articles</h3>
+  <ul>
+    <% @articles.each do |article| %>
+      <ul>
+        <li>
+          <p><%= article.date %></p>
+          <p><%= link_to article.title, article_path(article) %></p>
+          <p><%= link_to article.content, article_path(article) %></p>
+        </li>
+      </ul>
+    <% end %>
+  </ul>
+</div>
