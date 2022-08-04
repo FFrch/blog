@@ -7,22 +7,13 @@
 </ul>
 
 <h3>Historique des articles</h3>
-
-Pseudo code:
- 1. Isoler chaque année durant lesquelles un article a été publié - ok
- 2. Pour chacune de ces années, lister les titres des articles publiés & coder un lien redirigeant sur la vue de l'article
-
 <ul>
-  <%= @years.each do |year| %>
+  <% @years.each do |year| %>
     <li><%= year %></li>
-  <% end %>
-</ul>
-
-    <ul>
-      <li>
-        <p><%= article.date %></p>
-        <p><%= link_to article.title, article_path(article) %></p>
-      </li>
-    </ul>
+    <% @articles.each do |article, year| %>
+      <ul>
+        <li><%= link_to article.title, article_path(article) %></li>
+      </ul>
+    <% end %>
   <% end %>
 </ul>
