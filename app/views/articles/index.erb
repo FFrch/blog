@@ -6,14 +6,17 @@
   </div>
   <%= image_tag('banner.jpg') %>
 </div>
+
 <div class="container">
-  <h2>Navigation bar:</h2>
-  <ul>
-    <li><%= link_to "Home", articles_path %></li>
-    <li><%= link_to "Historique", history_path %></li>
-    <li>Contact</li>
-    <li>Search</li>
-  </ul>
+
+  <div class="navbar">
+    <ul>
+      <li><%= link_to "Home", articles_path%></li>
+      <li><%= link_to "Historique", history_path %></li>
+      <li>Contact</li>
+      <li class="search-item"><i class="fas fa-search"></i>   Search</li>
+    </ul>
+  </div>
 
   <h3>Articles</h3>
   <ul>
