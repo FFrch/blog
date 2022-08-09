@@ -1,10 +1,58 @@
 .banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+
+  h1{
+    position: absolute;
+  width: 458px;
+  height: 88px;
+  left: 79px;
+  top: 56px;
+
+  font-family: 'Plantagenet Cherokee';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 101px;
+
+  color: rgba(120, 120, 120, 0.11);
+  }
+
+  .about-me-box{
+    background-color: white;
+
+    padding: 1rem 3rem 1rem 3rem;
+
+    position: absolute;
+    width: 37%;
+    height: 12rem;
+    left: 255px;
+    top: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    filter: drop-shadow(0px 1px 3px rgba(78, 86, 77, 0.5));
+  }
+
+  h2{
+    font-family: 'Plantagenet Cherokee';
+    font-size: 40px;
+  }
+
+  p{
+    font-family: 'Helvetica';
+    font-size: 15px;
+    color: #787878;
+  }
 
   img{
-  size: cover;
-  opacity: 90%;
+    height: 21rem;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    opacity: 90%;
+
   }
 }
