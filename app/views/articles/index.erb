@@ -18,16 +18,17 @@
     </ul>
   </div>
 
-  <h3>Articles</h3>
   <ul>
     <% @articles.each do |article| %>
-      <ul>
-        <li>
-          <p><%= article.date %></p>
-          <p><%= link_to article.title, article_path(article) %></p>
-          <p><%= link_to article.content, article_path(article) %></p>
-        </li>
-      </ul>
+      <div class="article-card">
+        <ul>
+          <li>
+            <p class="article-date"><%= article.date %></p>
+            <p class="article-title"><%= link_to article.title, article_path(article) %></p>
+            <p class="article-content"><%= link_to article.content, article_path(article) %></p>
+          </li>
+        </ul>
+      </div>
     <% end %>
   </ul>
 </div>
