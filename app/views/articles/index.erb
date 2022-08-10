@@ -23,7 +23,7 @@
       <div class="article-card">
         <ul class="article-list">
           <li>
-            <p class="article-date"><%= article.date.strftime('%d %b %Y')  %></p>
+            <p class="article-date"><%= article.date.strftime('%d %b %Y').upcase%></p>
             <p class="article-title"><%= link_to article.title, article_path(article) %></p>
             <p class="article-content"><%= link_to article.content, article_path(article) %></p>
           </li>
