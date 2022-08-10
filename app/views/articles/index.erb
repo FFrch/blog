@@ -21,7 +21,7 @@
   <ul>
     <% @articles.each do |article| %>
       <div class="article-card">
-        <ul>
+        <ul class="article-list">
           <li>
             <p class="article-date"><%= article.date.strftime('%d %b %Y')  %></p>
             <p class="article-title"><%= link_to article.title, article_path(article) %></p>
