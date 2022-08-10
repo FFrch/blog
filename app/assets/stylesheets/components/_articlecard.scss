@@ -1,13 +1,57 @@
+.article-card{
+  border:#787878;
+  padding: 3rem 0rem;
+  height: 30rem;
+  display:flex;
+  align-items: flex-start;
 
-.article-list{
-  list-style: none;
+  img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+  }
+}
+
+.article-info{
+  width: 50%;
+  height: 100%;
+
+  ul{
+    list-style: none;
+  }
 }
 
 .article-date{
-font-family: 'Helvetica';
-font-weight: 700;
-font-size: 17px;
-letter-spacing: 0.01em;
+  font-family: 'Helvetica';
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.01em;
 
-color: #787878;
+  color: #787878;
+}
+
+.article-title{
+  font-family: 'Plantagenet Cherokee';
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 55px;
+  text-align: justify;
+
+  a{
+    text-decoration: none;
+    background-color: #76D8B4;
+    color: black;
+  }
+}
+
+.article-content{
+  font-family: 'Helvetica';
+  font-size: 17px;
+  text-align: justify;
+  color: #787878;
+
+  a{
+    text-decoration: none;
+    color: #787878;
+  }
 }
