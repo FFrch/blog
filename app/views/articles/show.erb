@@ -17,7 +17,8 @@
       <li class="search-item"><i class="fas fa-search"></i>   Search</li>
     </ul>
   </div>
-  <h2><%= @article.date %></h2>
-  <p><%= @article.title %></p>
-  <p><%= @article.content %></p>
+
+  <h2 class="article-date"><%= @article.date.strftime('%d %b %Y').upcase%></h2>
+  <p class="article-title"><%= @article.title %></p>
+  <p class="article-content"><%= @article.content %></p>
 </div>
