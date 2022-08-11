@@ -20,5 +20,6 @@
 
   <h2 class="article-date"><%= @article.date.strftime('%d %b %Y').upcase%></h2>
   <p class="article-title"><%= @article.title %></p>
+  <%= image_tag('article_image.jpg') %>
   <p class="article-content"><%= @article.content %></p>
 </div>

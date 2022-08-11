@@ -1,19 +1,32 @@
-<h2>Navigation bar:</h2>
-<ul>
-  <li><%= link_to "Home", articles_path %></li>
-  <li><%= link_to "Historique", history_path %></li>
-  <li>Contact</li>
-  <li>Search</li>
-</ul>
+<div class="banner">
+  <h1>About me</h1>
+  <div class="about-me-box">
+    <h2>About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium hendrerit enim. </p>
+  </div>
+  <%= image_tag('banner.jpg') %>
+</div>
 
-<h3>Historique des articles</h3>
-<ul>
-  <% @years.each do |year| %>
-    <li><%= year %></li>
-    <% @articles.each do |article, year| %>
-      <ul>
-        <li><%= link_to article.title, article_path(article) %></li>
-      </ul>
+<div class="container">
+
+  <div class="navbar">
+    <ul>
+      <li><%= link_to "Home", articles_path%></li>
+      <li><%= link_to "Historique", history_path %></li>
+      <li>Contact</li>
+      <li class="search-item"><i class="fas fa-search"></i>   Search</li>
+    </ul>
+  </div>
+
+  <h3>Historique des articles</h3>
+  <ul>
+    <% @years.each do |year| %>
+      <li><%= year %></li>
+      <% @articles.each do |article, year| %>
+        <ul>
+          <li><%= link_to article.title, article_path(article) %></li>
+        </ul>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+</div>
