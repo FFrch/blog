@@ -1,10 +1,10 @@
 .banner {
-  height: 30vw;
+  height: auto;
 
   h1{
     position: absolute;
     left: 4vw;
-    top: 0vw;
+    top: 6vw;
 
     font-family: 'Plantagenet Cherokee';
     font-style: normal;
@@ -15,11 +15,6 @@
     color: rgba(120, 120, 120, 0.11);
   }
 
-  @media screen and (min-width:1000px) {
-    h1{
-      top: 6vw;
-    }
-  }
   @media screen and (max-width:1000px) {
     h1{
       top: 5vw;
