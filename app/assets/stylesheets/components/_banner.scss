@@ -9,11 +9,80 @@
     font-family: 'Plantagenet Cherokee';
     font-style: normal;
     font-weight: 400;
-    t-weight: 400;
     font-size: 8vw;
     line-height: 101px;
 
     color: rgba(120, 120, 120, 0.11);
+  }
+
+  @media screen and (min-width:1000px) {
+    h1{
+      top: 6vw;
+    }
+  }
+  @media screen and (max-width:1000px) {
+    h1{
+      top: 5vw;
+    }
+  }
+  @media screen and (max-width:900px) {
+    h1{
+      top: 4vw;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    h1{
+      top: 3.5vw;
+    }
+  }
+
+  @media screen and (max-width:700px) {
+    h1{
+      top: 3vw;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    h1{
+      top: 1.5vw;
+    }
+  }
+
+  @media screen and (max-width:540px) {
+    h1{
+      top: 0vw;
+    }
+  }
+
+  @media screen and (max-width:450px) {
+    h1{
+      top: -2vw;
+    }
+  }
+
+  @media screen and (max-width:380px) {
+    h1{
+      top: -3vw;
+    }
+  }
+
+  @media screen and (max-width:360px) {
+    h1{
+      top: -4vw;
+    }
+  }
+
+  @media screen and (max-width:330px) {
+    h1{
+      top: -5vw;
+    }
+  }
+
+  @media screen and (max-width:310px) {
+    h1{
+      top: -7vw;
+    }
   }
 
   .about-me-box{
