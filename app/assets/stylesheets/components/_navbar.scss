@@ -1,22 +1,16 @@
 .navbar{
   height: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 1rem 0rem 1rem 0rem;
+  display: flex;
 
-  ul{
-    margin-bottom: 0px;
-    padding: 1rem 0rem 1rem 0rem;
-  }
-
-  li{
+  span{
     color: #BABABA;
     font-family: 'Helvetica';
-    font-size: 20px;
-    display: inline-block;
-    margin-right: 2rem;
-    align-content: center;
+    font-size: 1.75vw;
+    margin-right: 2vw;
   }
 
-  li:hover{
+  span:hover{
     color: #787878;
     cursor: grab;
   }
@@ -31,8 +25,8 @@
   }
 
   .search-item{
-    position: absolute;
-    left: 61rem;
+    margin-left: auto;
+    margin-right: 0px;
   }
 
   i{

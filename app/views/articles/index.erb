@@ -9,14 +9,12 @@
 
 <div class="container">
 
-  <div class="navbar">
-    <ul>
-      <li><%= link_to "Home", articles_path%></li>
-      <li><%= link_to "Historique", history_path %></li>
-      <li>Contact</li>
-      <li class="search-item"><i class="fas fa-search"></i>   Search</li>
-    </ul>
-  </div>
+  <nav class="navbar">
+      <span><%= link_to "Home", articles_path%></span>
+      <span><%= link_to "Historique", history_path %></span>
+      <span>Contact</span>
+      <span class="search-item"><i class="fas fa-search"></i>Search</span>
+  </nav>
 
   <% @articles.each do |article| %>
     <div class="article-card">
