@@ -21,7 +21,7 @@
       <div class="article-info">
         <p class="article-date"><%= article.date.strftime('%d %b %Y').upcase%></p>
         <p class="article-title"><%= link_to article.title, article_path(article) %></p>
-        <p class="article-content"><%= link_to article.content, article_path(article) %></p>
+        <p class="article-content"><%= link_to article.content, article_path(article) %>... LIRE LA SUITE</p>
       </div>
       <%= image_tag('article_image.jpg') %>
     </div>
