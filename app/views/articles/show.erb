@@ -16,8 +16,8 @@
       <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
 
-  <h2 class="article-date"><%= @article.date.strftime('%d %b %Y').upcase%></h2>
-  <p class="article-title"><%= @article.title %></p>
-  <%= image_tag('article_image.jpg') %>
+  <p class="article-date-show"><%= @article.date.strftime('%d %b %Y').upcase%></p>
+  <p class="article-title-show"><%= @article.title %></p>
+  <%= image_tag('article_image.jpg', class:"article-image-show") %>
   <p class="article-content"><%= @article.content %></p>
 </div>
