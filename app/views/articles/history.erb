@@ -16,13 +16,13 @@
       <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
 
-  <h3>Historique des articles</h3>
+  <h3 class="article-title-show">Historique des articles</h3>
   <ul>
     <% @years.each do |year| %>
-      <li><%= year %></li>
+      <li class="article-date-show"><%= year %></li>
       <% @articles.each do |article, year| %>
         <ul>
-          <li><%= link_to article.title, article_path(article) %></li>
+          <li class="article-content"><%= link_to article.title, article_path(article) %></li>
         </ul>
       <% end %>
     <% end %>

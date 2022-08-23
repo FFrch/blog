@@ -11,7 +11,7 @@
 
   <nav class="navbar">
       <span><%= link_to "Home", articles_path%></span>
-      <span><%= link_to "Historique", history_path %></span>
+      <span><%= link_to "History", history_path %></span>
       <span>Contact</span>
       <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
@@ -26,4 +26,13 @@
       <%= image_tag('article_image.jpg') %>
     </div>
   <% end %>
+
+  <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find an article"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 </div>
