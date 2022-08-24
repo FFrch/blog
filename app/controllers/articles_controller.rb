@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
+
   def index
     if params[:query].present?
-      @articles = Article.where('title ILIKE ?', "%#{params[:query]}%")
+      @articles = Article.where(title: params[:query])
     else
       @articles = Article.all
     end

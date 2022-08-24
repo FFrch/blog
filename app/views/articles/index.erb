@@ -16,6 +16,18 @@
       <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
 
+    <br>
+
+  <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find an article"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
   <% @articles.each do |article| %>
     <div class="article-card">
       <div class="article-info">
@@ -26,13 +38,3 @@
       <%= image_tag('article_image.jpg') %>
     </div>
   <% end %>
-
-  <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an article"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-</div>
