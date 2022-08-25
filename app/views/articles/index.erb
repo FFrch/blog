@@ -14,28 +14,18 @@
       <span><%= link_to "History", history_path %></span>
       <span>Contact</span>
 
-      <%= form_with url: articles_path, method: :get, class: "search-item" do %>
+      <%= form_with url: articles_path, method: :get, class: "d-flex search-item" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "form-control search-item",
           placeholder: "Find an article"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "search-item" %>
+        <span class="search-item"><i class="fas fa-search"></i><input type="submit", name="commit" value="Search" class="search-item" data-disable-with="Search">Search</span>
       <% end %>
 
       <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
-
-    <br>
-
-  <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find an article"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
 </div>
 
   <% @articles.each do |article| %>
