@@ -17,14 +17,12 @@
       <%= form_with url: articles_path, method: :get, class: "d-flex search-item" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control search-item",
+          class: "form-control",
           placeholder: "Find an article"
         %>
-        <%= submit_tag "Search", class: "search-item" %>
-        <span class="search-item"><i class="fas fa-search"></i><input type="submit", name="commit" value="Search" class="search-item" data-disable-with="Search">Search</span>
+        <i class="fas fa-search"><input type="submit", value="Search"name="commit" class="search-item" data-disable-with="Search"></i>
       <% end %>
 
-      <span class="search-item"><i class="fas fa-search"></i>Search</span>
   </nav>
 </div>
 

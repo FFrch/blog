@@ -9,6 +9,7 @@
     font-size: 1.75vw;
     margin-right: 2vw;
   }
+  }
 
   span:hover{
     color: #787878;
@@ -25,11 +26,32 @@
   }
 
   .search-item{
-    margin-left: auto;
-    margin-right: 0px;
+  margin-left: auto;
+  margin-right: 0px;
+
+  color: #BABABA;
+  font-family: 'Helvetica';
+  font-size: 1.75vw;
+  font-weight: 500;
+  margin-right: 2vw;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+
+  input{
+    margin-right: 1vw;
+  }
+
+  input:hover{
+    color: #787878;
   }
 
   i{
     margin-right:0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  i:hover{
+    color: #787878;
   }
 }
