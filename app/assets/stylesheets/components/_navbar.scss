@@ -39,12 +39,18 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
 
+  input{
+    margin-right: 1vw;
+  }
+
   span:hover{
     color: #787878;
   }
 
   .form-control{
+    input{
     margin-right: 1vw;
+    }
   }
 
   input:hover{
