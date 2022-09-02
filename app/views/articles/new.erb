@@ -1,1 +1,38 @@
-Form to be done
+<!-- Banner -->
+<div class="banner">
+  <h1>About me</h1>
+  <div class="about-me-box">
+    <h2>About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium hendrerit enim. </p>
+  </div>
+  <%= image_tag('banner.jpg') %>
+</div>
+
+<div class="container">
+
+  <nav class="navbar">
+    <span><%= link_to "Home", articles_path%></span>
+    <span><%= link_to "History", history_path %></span>
+    <span>Contact</span>
+
+    <!-- Searchbar -->
+    <%= form_with url: articles_path, method: :get, class: "d-flex search-item" do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find an article" %>
+      <i class="fas fa-search"><input type="submit", value="Search"name="commit" class="search-item" data-disable-with="Search"></i>
+    <% end %>
+
+    <!-- LogIn button -->
+    <button class="login-button">LogIn</button>
+  </nav>
+
+  <!-- Article creation form -->
+  <%= form_with model: @article do |f| %>
+  <%= f.hidden_field :date, value: Date.today %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+</div>

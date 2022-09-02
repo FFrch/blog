@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # post "articles", to: "articles#create"
 
   resources :articles, only: [:new, :create, :show]
+  post '/' => 'articles#create'
   get "history", to: 'articles#history'
 end
