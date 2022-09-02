@@ -37,14 +37,16 @@
     </div>
   </nav>
 
+  <p class="article-title-show">Publish a new post</p>
+
   <!-- Article creation form -->
-  <%= form_with model: @article do |f| %>
+  <%= form_with model: @article, class: :"article-form" do |f| %>
   <%= f.hidden_field :date, value: Date.today %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <%= f.label :content %>
+  <%= f.label :content, value: "Post description" %>
   <%= f.text_field :content %>
-  <%= f.submit %>
+  <%= f.submit value:"Publish your article" %>
 <% end %>
 
 </div>
