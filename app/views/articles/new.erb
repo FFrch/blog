@@ -17,12 +17,24 @@
 
     <!-- Searchbar -->
     <%= form_with url: articles_path, method: :get, class: "d-flex search-item" do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find an article" %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an article"
+      %>
       <i class="fas fa-search"><input type="submit", value="Search"name="commit" class="search-item" data-disable-with="Search"></i>
     <% end %>
 
-    <!-- LogIn button -->
-    <button class="login-button">LogIn</button>
+    <!-- LogIn dropdown button -->
+    <div class="dropdown">
+      <button class="login-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Log In</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/articles/new">Publish a new article</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Log Out</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Article creation form -->
