@@ -45,8 +45,8 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :content, value: "Post description" %>
-  <%= f.text_field :content %>
-  <%= f.submit value:"Publish your article" %>
+  <%= f.rich_text_area :content, class: "form-control" %> <!--Field with editing features-->
+  <%= f.submit value:"Publish your article", class:"login-button" %>
 <% end %>
 
 </div>

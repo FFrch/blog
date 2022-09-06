@@ -10,3 +10,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Action_text partial (editing buttons)
+@import "trix/dist/trix";
+@import "./actiontext.scss";
