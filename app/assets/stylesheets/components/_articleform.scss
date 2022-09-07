@@ -27,7 +27,8 @@
 }
 
 #article_content{
-  height:40vh;
+  height: auto;
+  min-height: 50vh;
 }
 
 .form-control{
