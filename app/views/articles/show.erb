@@ -36,6 +36,8 @@
     </div>
   </nav>
 
+  <p><%=@views%> views </p>
+
   <p class="article-date-show"><%= @article.date.strftime('%d %b %Y').upcase%></p>
   <p class="article-title-show"><%= @article.title %></p>
   <%= image_tag('article_image.jpg', class:"article-image-show") %>
